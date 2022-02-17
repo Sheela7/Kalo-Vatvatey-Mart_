@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/test.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+    <script src="./js/image.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/menu-tabs.js"></script>
+    <script src="./js/modal.js"></script>
+</head>
+
+<body>
+
+    <div id="image-modal" class="image-modal">
+        <div class="modal-image-content">
+            <img src="./images/hotel.jpg" id='selectedImageModal'>
+            <span class="close" onclick="closeImageModal()" style="margin-left:150px; color: #eeda39;">&times;</span>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Confirmation</h3>
+      <hr style="margin-left: 20px; margin-right: 20px;">
+      <h5>Are You Sure Want To Delete Steam Momo??</h5>
+      <div class="modal-action-buttons">
+        <button>Yes</button>
+        <button onclick="closeModal()">No</button>
+      </div>
+    </div>
+  
+  </div>
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  <div class="sidebar" id="sidebar">
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li>
+
+
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<a href="./dashboard-notification.html"><div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+</a>
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+
+<div class="table-list-heading">
+    <h3>Here are your Menu lists</h3>
+    </div>
+
+<div class="search-wrapper" id="search-wrapper">
+    <div class="input-form">
+        <input type="search" class="form-input" placeholder="" onkeyup="tableSearch()" name="" id="table-search-wrapper-input" required>
+        <label for="tableNumbers">Search Menu Item Here...</span></label>
+        </div><!-- input form ends -->
+
+        <a href="./add-menu.html"><button>Add Item</button></a>
+</div>
+
+<div class="tab-container">
+    <div class="tab">
+        <button class="tablinks active" onclick="openMenu(event, 'All')">All</button>
+        <button class="tablinks" onclick="openMenu(event, 'Food')">Food</button>
+        <button class="tablinks" onclick="openMenu(event, 'Drinks')">Drinks</button>
+      </div>
+</div>
+
+  
+  <div id="All" class="tab-content">
+      <h3>Your All Menus</h3>
+    <div class="menu-grid-view">
+
+        <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="" onclick="openImage(this)">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash" onclick="openModal()"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+        
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                 
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                 
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash" onclick="openModal()"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                 
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+          <div class="single-menu">
+            <div class="menu-details">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin-right: 50px; margin-left: 50px;">
+                   <div class="menu-texts">
+                    <h4>Veg Chowmin</h4>
+                    <h5>Price: Rs.350</h5>
+                    <h5>Category: Food</h5>
+                    <h5>Type: Alcoholic Drinks</h5>
+                   </div>
+            </div><!-- menu details -->
+            <div class="menu-actions">
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-trash"></i>
+            </div><!-- menu actions -->
+          </div><!-- single menu -->
+    </div>
+ 
+
+  </div>
+
+  <div id="Food" class="tab-content">
+    <h3>Your Food Menus</h3>
+  <div class="menu-grid-view">
+
+      <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="" onclick="openImage(this)">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash" onclick="openModal()"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+      
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash" onclick="openModal()"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+  </div>
+
+</div>
+
+<div id="Drinks" class="tab-content">
+    <h3>Your Drinks Menus</h3>
+  <div class="menu-grid-view">
+
+      <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="" onclick="openImage(this)">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash" onclick="openModal()"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+      
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash" onclick="openModal()"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+               
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+        <div class="single-menu">
+          <div class="menu-details">
+              <img src="./images/hotel.jpg" alt="">
+              <hr style="margin-right: 50px; margin-left: 50px;">
+                 <div class="menu-texts">
+                  <h4>Veg Chowmin</h4>
+                  <h5>Price: Rs.350</h5>
+                  <h5>Category: Food</h5>
+                  <h5>Type: Alcoholic Drinks</h5>
+                 </div>
+          </div><!-- menu details -->
+          <div class="menu-actions">
+              <i class="fas fa-edit"></i>
+              <i class="fas fa-trash"></i>
+          </div><!-- menu actions -->
+        </div><!-- single menu -->
+  </div>
+
+
+</div>
+
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved. Hunchha Digital Agency.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>

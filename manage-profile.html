@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+    <script src="./js/image.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/menu-tabs.js"></script>
+</head>
+
+<body>
+    <div id="imageModal" class="imageModal">
+        <div class="modalImageContent" id="modalImageContent">
+            <img src="" id='selectedImageModal' class="">
+            <span class="close" id="image-close-times" onclick="closeImageModal()" style="margin-left:50px; color: #eeda39;">&times;</span>
+        </div>
+    </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="sidebar" id="sidebar">
+
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<!-- <li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li> -->
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<a href="./dashboard-notification.html"><div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+</a>
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+
+<div class="table-list-heading">
+    <h3>Manage Profile</h3>
+    </div>
+
+<div class="manage-profile-container" id="manage-profile-container-id">
+<div class="profile-links">
+    <ul class="profile-unordered-list">
+        <li class="profile-sub-links profile-link-active" onclick="openProfile(event, 'profile-picture')">Profile Picture</li>
+        <li class="profile-sub-links" onclick="openProfile(event, 'profile-name')">Name</li>
+        <li class="profile-sub-links" onclick="openProfile(event, 'profile-password')">Password</li>
+        <li class="profile-sub-links social" onclick="openProfile(event, 'profile-social')">Social</li>
+        <li class="profile-sub-links" onclick="openProfile(event, 'profile-location')">Location</li>
+    </ul>
+</div>
+<div class="manage-profile-view">
+
+    <div id="profile-picture" class="tabcontent" style="display: block;">
+    <h4>Change Display Picture</h4>
+    <img src="./images/no-image.png" alt="" id="profile-image-show" onclick="openImage(this)">
+    <form action="" class="profile-picture-form" id="profile-picture-form">
+        <input type="file" onchange="displayPicture(this)">
+        <button class="profile-button">Change</button>
+    </form><!--profile-picture-form  -->
+    </div><!-- profile picture -->
+
+    <div id="profile-name" class="tabcontent">
+        <h4>Change Name</h4>
+        <form action="" class="profile-picture-form">
+            <div class="input-form">
+                <input type="text" class="form-input" placeholder="" name="propsName" id="" required>
+                <label for="tableNumbersss">Enter Name</label>
+                </div>
+                <button class="profile-button">Change</button>
+        </form>
+    </div><!-- profile name -->
+    <div id="profile-location" class="tabcontent">
+        <h4>Change Location</h4>
+        <form action="" class="profile-picture-form">
+            <label for="" id="register-name-label" class="register-label">Company Location(District)</label>
+                <div class="input-form">
+                    <select name="menu-category" id="menuCategory" class="menu-category" required>
+                        <option disabled selected>Choose One:</option>
+                        <option value="Taplejung">Taplejung</option>
+                                <option value="Panchthar">Panchthar</option>
+                                <option value="Ilam">Ilam</option>
+                                <option value="Jhapa">Jhapa</option>
+                                %{--Koshi--}%
+                                <option value="Morang">Morang</option>
+                                <option value="Sunsari" selected="selected">Sunsari</option>
+                                <option value="Dhankutta">Dhankutta</option>
+                                <option value="Sankhuwasabha">Sankhuwasabha</option>
+                                <option value="Bhojpur">Bhojpur</option>
+                                <option value="Terhathum">Terhathum</option>
+                                %{--Sagarmatha--}%
+                                <option value="Okhaldunga">Okhaldunga</option>
+                                <option value="Khotang">Khotang</option>
+                                <option value="Solukhumbu">Solukhumbu</option>
+                                <option value="Udaypur">Udaypur</option>
+                                <option value="Saptari">Saptari</option>
+                                <option value="Siraha">Siraha</option>
+                                %{--Janakpur--}%
+                                <option value="Dhanusa">Dhanusa</option>
+                                <option value="Mahottari">Mahottari</option>
+                                <option value="Sarlahi">Sarlahi</option>
+                                <option value="Sindhuli">Sindhuli</option>
+                                <option value="Ramechhap">Ramechhap</option>
+                                <option value="Dolkha">Dolkha</option>
+                                %{--Bagmati--}%
+                                <option value="Sindhupalchauk">Sindhupalchauk</option>
+                                <option value="Kavreplanchauk">Kavreplanchauk</option>
+                                <option value="Lalitpur">Lalitpur</option>
+                                <option value="Bhaktapur">Bhaktapur</option>
+                                <option value="Kathmandu">Kathmandu</option>
+                                <option value="Nuwakot">Nuwakot</option>
+                                <option value="Rasuwa">Rasuwa</option>
+                                <option value="Dhading">Dhading</option>
+                                %{--Narayani--}%
+                                <option value="Makwanpur">Makwanpur</option>
+                                <option value="Rauthat">Rauthat</option>
+                                <option value="Bara">Bara</option>
+                                <option value="Parsa">Parsa</option>
+                                <option value="Chitwan">Chitwan</option>
+                                %{--Gandaki--}%
+                                <option value="Gorkha">Gorkha</option>
+                                <option value="Lamjung">Lamjung</option>
+                                <option value="Tanahun">Tanahun</option>
+                                <option value="Tanahun">Tanahun</option>
+                                <option value="Syangja">Syangja</option>
+                                <option value="Kaski">Kaski</option>
+                                <option value="Manag">Manag</option>
+                                %{--Dhawalagiri--}%
+                                <option value="Mustang">Mustang</option>
+                                <option value="Parwat">Parwat</option>
+                                <option value="Myagdi">Myagdi</option>
+                                <option value="Myagdi">Myagdi</option>
+                                <option value="Baglung">Baglung</option>
+                                %{--Lumbini--}%
+                                <option value="Gulmi">Gulmi</option>
+                                <option value="Palpa">Palpa</option>
+                                <option value="Nawalparasi">Nawalparasi</option>
+                                <option value="Rupandehi">Rupandehi</option>
+                                <option value="Arghakhanchi">Arghakhanchi</option>
+                                <option value="Kapilvastu">Kapilvastu</option>
+                                %{--Rapti--}%
+                                <option value="Pyuthan">Pyuthan</option>
+                                <option value="Rolpa">Rolpa</option>
+                                <option value="Rukum">Rukum</option>
+                                <option value="Salyan">Salyan</option>
+                                <option value="Dang">Dang</option>
+                                %{--Bheri--}%
+                                <option value="Bardiya">Bardiya</option>
+                                <option value="Surkhet">Surkhet</option>
+                                <option value="Dailekh">Dailekh</option>
+                                <option value="Banke">Banke</option>
+                                <option value="Jajarkot">Jajarkot</option>
+                                %{--Karnali--}%
+                                <option value="Dolpa">Dolpa</option>
+                                <option value="Humla">Humla</option>
+                                <option value="Kalikot">Kalikot</option>
+                                <option value="Mugu">Mugu</option>
+                                <option value="Jumla">Jumla</option>
+                                %{--Seti--}%
+                                <option value="Bajura">Bajura</option>
+                                <option value="Bajhang">Bajhang</option>
+                                <option value="Achham">Achham</option>
+                                <option value="Doti">Doti</option>
+                                <option value="Kailali">Kailali</option>
+                                %{--Mahakali--}%
+                                <option value="Kanchanpur">Kanchanpur</option>
+                                <option value="Dadeldhura">Dadeldhura</option>
+                                <option value="Baitadi">Baitadi</option>
+                                <option value="Darchula">Darchula</option>
+                    </select>
+                    </div>
+            <div class="input-form">
+                <input type="text" class="form-input" placeholder="" value="huss" name="propsName" id="" required>
+                <label for="">Place(eg.Pakali, Itahari-17)</label>
+                </div>
+                <button class="profile-button">Change</button>
+        </form>
+    </div><!-- profile location -->
+    <div id="profile-password" class="tabcontent">
+        <h4>Change Password</h4>
+        <form action="" class="profile-picture-form">
+            <div class="input-form">
+                <input type="password" class="form-input" placeholder="" name="propsName" id="" required>
+                <label for="tableNumbersss">Previous Password</label>
+                
+                </div>
+                
+                <div class="input-form">
+                    <input type="password" class="form-input" placeholder="" name="propsName" id="" required>
+                    <label for="tableNumbersss">New Password</label>
+                    
+                    </div>
+                    
+                    <div class="input-form">
+                        <input type="password" class="form-input" placeholder="" name="propsName" id="" required>
+                        <label for="tableNumbersss">Confirm Password</label>
+                        
+                        </div>
+                        
+                        <button class="profile-button">Change</button>
+        </form>
+    </div><!-- profile password -->
+    <div id="profile-social" class="tabcontent">
+        <h4>Your Social Links</h4>
+        <form action="" class="profile-picture-form">
+            <div class="input-form-profile-social">
+                <input type="url" class="form-input-profile-social" placeholder=" " autocomplete="off" name="propsName" id="">
+                <label for="tableNumbersss">Youtube Channel Link</label>
+                
+                </div>
+                
+                <div class="input-form-profile-social">
+                    <input type="url" class="form-input-profile-social" placeholder=" " autocomplete="off" name="propsName" id="">
+                    <label for="tableNumbersss">facebook Page Link</label>
+                    
+                    </div>
+                    
+                    <div class="input-form-profile-social">
+                        <input type="url" class="form-input-profile-social" placeholder=" " autocomplete="off" name="propsName" id="">
+                        <label for="tableNumbersss">Tiktok Channel Link</label>
+                        
+                        </div>
+
+                        <div class="input-form-profile-social">
+                            <input type="url" class="form-input-profile-social" placeholder=" " autocomplete="off" name="propsName" id="">
+                            <label for="tableNumbersss">Twitter Link</label>
+                            
+                            </div>
+
+                            <div class="input-form-textarea">
+                                <textarea name="" id="" cols="30" rows="10" placeholder=" "></textarea>
+                                <label for="">About Your Hospitality Organization</label>
+                                </div>
+                        
+                        <button class="profile-button">Change</button>
+        </form>
+    </div>
+</div>
+</div><!-- manage profile container -->
+
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>

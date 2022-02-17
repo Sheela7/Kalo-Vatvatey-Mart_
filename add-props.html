@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+    <script src="./js/image.js"></script>
+    <script src="./js/toaster.js"></script>
+</head>
+
+<body>
+    <div id="snackbar" class="snackbar">Props Added SuccessFully</div>
+
+    <div id="imageModal" class="imageModal">
+        <div class="modalImageContent">
+            <img src="" id='selectedImageModal'>
+            <span class="close" onclick="closeImageModal()" style="margin-left:50px; color: #eeda39;">&times;</span>
+        </div>
+    </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="sidebar" id="sidebar">
+
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li>
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+
+<form action="" class="form">
+    <div class="header-components">
+    <h3 class="table-store-heading" >Store Props Details</h3>
+    </div>
+
+<div class="input-form">
+<input type="text" class="form-input" autocomplete="off" name="propsName" id="" required>
+<label for="tableNumbersss">Props Name</label>
+</div>
+
+<div class="input-file">
+<div class="input-form-file">
+<input type="file" class="form-input-file" name="" id="" onchange="propsImage(this)" required>
+<label for="">Props Image (Required)</label>
+</div>
+<img id="props-image" src="" alt="Props" onclick="openImage(this)" class="selectedPhoto">
+</div>
+
+<div class="input-form">
+<input type="number" class="form-input" placeholder="" name="propsPrice" id="" required>
+<label for="tableNumbersss">Props Price</label>
+</div>
+
+<label for="propsPrice" class="props-label-price">Price Per Unit</label>
+<div class="input-form-checkbox">
+    <div class="checkbox">
+        <label>Piece</label>
+        <input type="checkbox" class="form-input-checkbox" placeholder="" name="propsPricePerPiece" id="" required>
+    </div>
+    <div class="checkbox">
+        <label>Packet</label>
+        <input type="checkbox" class="form-input-checkbox" placeholder="" name="propsPricePerPacket" id="" required>
+    </div>
+    <div class="checkbox">
+        <label>Dozen</label>
+        <input type="checkbox" class="form-input-checkbox" placeholder="" name="propsPricePerDozen" id="" required>
+    </div>
+    <div class="checkbox">
+        <label>Pound</label>
+        <input type="checkbox" class="form-input-checkbox" placeholder="" name="propsPricePerPound" id="" required>
+    </div>
+ </div>
+
+<div class="input-form-textarea">
+<textarea name="" id="" cols="30" rows="10" placeholder=" "></textarea>
+<label for="">Props Used For</label>
+</div>
+
+<div class="submit-button">
+<button type="submit" onclick="showToaster()">Store</button>
+</div>
+
+</form>
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved. Hunchha Digital Agency.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>

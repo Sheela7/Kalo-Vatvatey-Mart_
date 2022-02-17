@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="sidebar" id="sidebar">
+
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<!-- <li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li> -->
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<a href="./dashboard-notification.html"><div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+</a>
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+
+<div class="top-header-card">
+
+<a href="./sales-page.html"><div class="top-single-card">
+
+<div class="top-card-content">
+
+<div class="top-card-left">
+<h3>Rs.22000<span style="font-size: 10px; color: grey;">/month(kartik)</span></h3>
+<h4>Sales</h4>
+</div><!-- card left ends -->
+
+<div class="top-card-right">
+<i class="fas fa-chart-line fa-2x"></i>
+</div><!-- Card right ends -->
+
+</div><!-- top card content ends -->
+
+</div><!-- Top single Card ends -->
+</a>
+
+<a href="./customers.html"> <div class="top-single-card">
+ <div class="top-card-content">
+
+        <div class="top-card-left">
+        <h3>22<span style="font-size: 10px; color: grey;">/month(kartik)</span></h3>
+        <h4>Customers</h4>
+        </div><!-- card left ends -->
+        
+        <div class="top-card-right">
+        <i class="fas fa-users fa-2x"></i>
+        </div><!-- Card right ends -->
+        
+        </div><!-- top card content ends -->
+        
+</div></a><!-- Top single Card ends -->
+
+
+<a href="./booking-details.html">
+<div class="top-single-card">
+  <div class="top-card-content">
+
+        <div class="top-card-left">
+        <h3>22<span style="font-size: 10px; color: grey;">/month(kartik)</span></h3>
+        <h4>Booking</h4>
+        </div><!-- card left ends -->
+        
+        <div class="top-card-right">
+        <i class="fas fa-book fa-2x"></i>
+        </div><!-- Card right ends -->
+        
+        </div><!-- top card content ends -->
+</div><!-- Top single Card ends -->
+</a>
+
+<a href="./table-lists.html">
+<div class="top-single-card">
+<div class="top-card-content">
+
+        <div class="top-card-left">
+        <h3>3<span style="font-size: 10px; color: grey;">/total</span></h3>
+        <h4>Table</h4>
+        </div><!-- card left ends -->
+        
+        <div class="top-card-right">
+        <i class="fas fa-couch fa-2x"></i>
+        </div><!-- Card right ends -->
+        
+        </div><!-- top card content ends -->
+        
+</div></a><!-- Top single Card ends -->
+
+
+</div><!-- Top header card ends -->
+
+<div class="booking-detail-card"  style="overflow-x: auto;">
+<div class="today-booking-detail">
+<h4>Today's Bookings</h4>
+<table id="customers">
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Table</th>
+      <th>Time</th>
+      <th>Check</th>
+    </tr>
+    <tr>
+      <td>Hemanta Karki</td>
+      <td>9844028073</td>
+      <td>2</td>
+      <td>2:45PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td><a>Nowraj Sharma</a></td>
+      <td>9813976999</td>
+      <td>1</td>
+      <td>1:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Vneet Karki</td>
+      <td>9844028073</td>
+      <td>3</td>
+      <td>2:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Amit Karki</td>
+      <td>9813976999</td>
+      <td>2</td>
+      <td>10:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Sistam Pokharell</td>
+      <td>9863728766</td>
+      <td>9</td>
+      <td>9:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Ajit Mandal</td>
+      <td>9844043451</td>
+      <td>3</td>
+      <td>8:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Ashish Raj Ghimere</td>
+      <td>9823674523</td>
+      <td>7</td>
+      <td>12:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Manish Regmi</td>
+      <td>9844028073</td>
+      <td>5</td>
+      <td>11:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Prabin Chaudary</td>
+      <td>9869816686</td>
+      <td>8</td>
+      <td>3:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Sheela Pokharel</td>
+      <td>9807315076</td>
+      <td>5</td>
+      <td>11:45AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+  </table>
+</div><!-- Todays bookings ends -->
+<div class="upcoming-booking-detail">
+<h4>Upcoming Bookings</h4>
+<table id="customers">
+    <tr>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Table</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Check</th>
+    </tr>
+    <tr>
+      <td>Hemanta Karki</td>
+      <td>9844028073</td>
+      <td>2</td>
+      <td>2078-05-01, Sunday</td>
+      <td>2:45PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td><a>Nowraj Sharma</a></td>
+      <td>9813976999</td>
+      <td>1</td>
+      <td>2078-05-01, Sunday</td>
+      <td>1:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Vneet Karki</td>
+      <td>9844028073</td>
+      <td>3</td>
+      <td>2078-05-01, Sunday</td>
+      <td>2:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Amit Karki</td>
+      <td>9813976999</td>
+      <td>2</td>
+      <td>2078-05-01, Sunday</td>
+      <td>10:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Sistam Pokharell</td>
+      <td>9863728766</td>
+      <td>9</td>
+      <td>2078-05-01, Sunday</td>
+      <td>9:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Ajit Mandal</td>
+      <td>9844043451</td>
+      <td>3</td>
+      <td>2078-05-01, Sunday</td>
+      <td>8:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Ashish Raj Ghimere</td>
+      <td>9823674523</td>
+      <td>7</td>
+      <td>2078-05-01, Sunday</td>
+      <td>12:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Manish Regmi</td>
+      <td>9844028073</td>
+      <td>5</td>
+      <td>2078-05-01, Sunday</td>
+      <td>11:00AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Prabin Chaudary</td>
+      <td>9869816686</td>
+      <td>8</td>
+      <td>2078-05-01, Sunday</td>
+      <td>3:00PM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+    <tr>
+      <td>Sheela Pokharel</td>
+      <td>9807315076</td>
+      <td>5</td>
+      <td>2078-05-01, Sunday</td>
+      <td>11:45AM</td>
+      <td><input type="checkbox" name="" id=""></td>
+    </tr>
+  </table>
+</div><!-- upcoming booking detail ends -->
+</div>
+
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>

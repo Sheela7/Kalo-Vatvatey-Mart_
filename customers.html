@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+    <script src="./js/image.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/search.js"></script>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="sidebar" id="sidebar">
+
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li>
+
+
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<a href="./dashboard-notification.html"><div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+</a>
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+<h3 class="customer-heading">Your Customers</h3>
+<div class="search-wrapper" id="search-wrapper">
+    <div class="input-form">
+        <input type="search" class="form-input" placeholder="" onkeyup="customerSearch()" name="" id="customer-search-wrapper-input" required>
+        <label for="tableNumbers">Search By Month...</span></label>
+        </div><!-- input form ends -->
+</div>
+<div class="customer-detail-container">
+    <h4>October, 2021/ Kartik, 2078(Current Month)<br>
+        <span style="font-size: 13px; color: #aaaaaa;">Total Customer: 20</span>
+        </h4>
+        <hr style="margin-left: 15%; margin-right: 15%;">
+
+    <div class="customer-container">
+   
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+    
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Srijan Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Biratnagar, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Puskar Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Srijan Regmi</h4>
+                <h5>xanmidfj9@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Srijan Regmi</h4>
+                <h5>hunchha@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>7869595</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Srijan Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Srijan Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+    
+    
+        
+    </div>
+</div>
+<div class="customer-detail-container">
+    <h4>September, 2021/ Ashoj, 2078<br>
+        <span style="font-size: 13px; color: #aaaaaa;">Total Customer: 20</span>
+        </h4>
+        <hr style="margin-left: 15%; margin-right: 15%;">
+
+    <div class="customer-container">
+   
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+    
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Biratnagar, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Puskar Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>xanmidfj9@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>hunchha@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>7869595</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+        <div class="single-customer-detail">
+            <div class="detail-customer">
+                <img src="./images/hotel.jpg" alt="">
+                <hr style="margin:0px 50px;">
+                <h4>Manish Regmi</h4>
+                <h5>manishregmi39@gmail.com</h5>
+                <h5>Itahari-7, Sunsari</h5>
+                <h5>9844028073</h5>
+            </div><!-- detail customer -->
+            <div class="customer-bottom-container">
+                
+            </div>
+        </div>
+    
+    
+    
+        
+    </div>
+</div>
+
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>

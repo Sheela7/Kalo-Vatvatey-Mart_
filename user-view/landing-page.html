@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../styles/user-view.css">
+    
+    <title>Landing-Page</title>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+
+<header id="landing-header" class="">
+    <ul class="user-header-links">
+        <li class="user-header-sublinks">Home</li>
+        <li class="user-header-sublinks">Location</li>
+     
+        <img src="../images/logo1.png" class="user-header-sublinks" alt="" height="100" width="100" id="landing-logo">
+           <li class="user-header-sublinks">About</li>
+        <li class="user-header-sublinks">Contact</li>
+    </ul>
+</header>
+
+<header id="mobile-view-header">
+
+
+<ul class="mobile-view-header-menu-lists">
+    <a href=""><div class="mobile-home">
+    <li class="mobile-sub-menu"><i class="fas fa-home"></i></li>
+    <p>Home</p>
+</div></a>
+
+<a href=""><div class="mobile-location">
+    <li class="mobile-sub-menu"><i class="fas fa-map-marker-alt"></i></li>
+<p>Location</p>
+</div></a>
+
+<a href=""><div class="info">
+    <li class="mobile-sub-menu"><i class="fas fa-info-circle"></i></li>
+    <p>Info</p>
+</div></a>
+
+<a href=""><div class="contact">
+    <li class="mobile-sub-menu"><i class="fas fa-phone"></i></li>
+<p>contact</p>
+</div></a>
+</ul>
+
+<div class="mobile-user-image">
+    <img src="../images/userdp.png" alt="">
+</div>
+</header><!-- mobile-view-header -->
+
+<div class="product-info-container">
+<div class="product-logo">
+<img src="../images/logo1.png" alt="">
+</div>
+<img src="../images/event2.jpg" alt="">
+
+<div class="search-form-container">
+<p>Your Mini-Event Planner</p>
+<h6>Plan-Book-Ready-Go</h6>
+
+<form action="">
+<div class="user-search-form">
+    <input id="party" type="datetime-local" name="partydate" value="2021-06-01T08:30">
+    <div class="icon-container"><i class="fas fa-clock"></i></div>
+</div><!-- user search form -->
+
+<div class="user-search-form">
+<input type="number" name="" id="" placeholder="Total People">
+<div class="icon-container"><i class="fas fa-user"></i></div>
+</div><!-- user search form -->
+
+<div class="user-search-form">
+<select name="" id="">
+    <option value="">Choose Event</option>
+    <option value="">Choose Event</option>
+    <option value="">Choose Event</option>
+    <option value="">Choose Event</option>
+    <option value="">Choose Event</option>
+    <option value="">Choose Event</option>
+</select>
+<div class="icon-container"><i class="fas fa-book-heart"></i></div>
+</div><!-- user search form -->
+
+<div class="user-search-button">
+    <button class="user-search-form-button"><i class="fas fa-search"></i></button>
+</div>
+</form><!-- form -->
+</div><!-- Search Form Container -->
+
+<div class="parent-bouncing-arrow" id="parent-bouncing-arrow">
+<div class="bouncing-arrow">
+<i class="fas fa-arrow-down"></i>
+</div>
+</div>
+
+</div><!-- product info container -->
+
+<div class="we-provides" id="we-provides">
+
+<div class="first-container">
+<img src="../images/Group 1.png" alt="">
+<h5>We Provide</h5>
+<p>A Place with Your Setup in A Minute.</p>
+<hr style="margin-left:45%; margin-right: 45%; border: .5px solid #FFA710; margin-top: 5px;">
+</div><!-- first container -->
+
+<div class="second-container">
+    <div class="place-of-your-choice">
+        <p class="place-of-your-choice-heading">Place Of Your Choice</p>
+        <p class="place-of-your-choice-details">
+            Choose the Best place that Suits you. <br>
+            Book cabin or private place or Table.
+        </p>
+        <button>Let's Choose</button>
+    </div><!-- place-of-your-choice -->
+
+    <div class="place-of-your-choice-image">
+<img src="../images/sunbeds-2446568_960_720.webp" alt="">
+    </div><!-- place-of-your-choice-image -->
+
+</div><!-- second container -->
+
+<div class="second-container">
+    
+    <div class="place-of-your-choice-image">
+        <img src="../images/slider10.webp" alt="">
+            </div><!-- place-of-your-choice-image -->
+        
+    <div class="place-of-your-choice">
+        <p class="place-of-your-choice-heading">Your Location, Your Setup</p>
+        <p class="place-of-your-choice-details">
+            Choose Your Location. Choose Your Props.<br>
+            Arrange the Venue In A Minute.
+        </p>
+        <button>Let's Setup</button>
+    </div><!-- place-of-your-choice -->
+
+</div><!-- second container -->
+</div><!-- we provides -->
+
+<div class="what-we-arranges" id="what-we-arranges">
+
+<div class="first-container">
+    <img src="../images/Group 1.png" alt="">
+    <h5>We Arrange</h5>
+    <p>Dream Celebration You Wished For</p>
+    <hr style="margin-left:45%; margin-right: 45%; border: .5px solid #FFA710; margin-top: 5px;">
+</div><!-- first-container -->
+
+<div class="arrangement-lists" id="arrangement-lists">
+
+<div id="birthday-arrangement" class="birthday-arrangement" onclick="showDiv(this)">
+<div class="heading-icon">
+<p>Birthday Celebration</p>
+<i class="fas fa-angle-down fa-2x"></i>
+</div><!-- heading icon -->
+<div class="birthday-details" id="birthday-details">
+<div class="arrangement-left-view">
+<p>Birthday's, Most Special Occassion For Everyone.
+Choose The Location, Find Your Best Props, Menu And Create
+Surprises For Loved Ones And YourSelf. Let Them Know That You Care For Them.
+</p>
+<div class="arrangement-button">
+<a><button>Say Happy Birthday</button></a>
+</div><!-- arrangement button -->
+</div><!-- arrangement left view -->
+<img src="../images/slider5.jpg" alt="">
+</div><!-- birthday-details -->
+<hr style="margin:20px 0px;">
+</div><!-- birthday arrangement -->
+
+
+<div id="date-arrangement" class="date-arrangement" onclick="showDiv(this)" style="height: 40px;">
+<div class="heading-icon">
+<p>Dating Arrangement</p>
+<i class="fas fa-angle-up fa-2x"></i>
+</div><!-- heading icon -->
+<div class="dating-details" id="dating-details">
+    <div class="arrangement-left-view">
+        <p>Let Your Partner Know That Anywhere With Them Is Your Great Place.
+        Find The Best Place, Props And Table For Your Partner And You. 
+        </p>
+        <div class="arrangement-button">
+        <a><button>Date My Love</button></a>
+        </div><!-- arrangement button -->
+        </div><!-- arrangement left view -->
+        <img src="../images/slider5.jpg" alt="">
+</div><!-- dating-details -->
+<hr style="margin:20px 0px;">
+</div><!-- date arrangement -->
+
+<div id="propose-arrangement" class="propose-arrangement" onclick="showDiv(this)" style="height: 40px;">
+<div class="heading-icon">
+<p>Propose Arrangement</p>
+<i class="fas fa-angle-up fa-2x"></i>
+</div><!-- heading icon -->
+<div class="propose-details" id="propose-details">
+    <div class="arrangement-left-view">
+        <p>When You Realized You Wanted To Spend The Rest Of Your Life With Her. 
+        Find Your Place And Design It With The Props You Want
+        That Makes You And Her Special.
+        This Is The Day Make Her Feel Special,
+        Say That You Love Her.
+        </p>
+        <div class="arrangement-button">
+        <a><button>Propose Her</button></a>
+        </div><!-- arrangement button -->
+        </div><!-- arrangement left view -->
+        <img src="../images/slider5.jpg" alt="">
+</div><!-- dating-details -->
+<hr style="margin:20px 0px;">
+</div><!-- date arrangement -->
+
+<div id="anniversary-arrangement" class="anniversary-arrangement" onclick="showDiv(this)" style="height: 40px;">
+<div class="heading-icon">
+<p>Anniversary Planning</p>
+<i class="fas fa-angle-up fa-2x"></i>
+</div><!-- heading icon -->
+<div class="anniversary-details" id="anniversary-details">
+    <div class="arrangement-left-view">
+        <p>Today Is The Day You Became Two Body One Soul. Say That Your Heart Still
+        Beat For Your Partner. Remind And Celebrate This Day Today. Setup Your Location 
+        With Your Props And Live This Moment Again.
+        </p>
+        <div class="arrangement-button">
+        <a><button>Say Happy Anniversary</button></a>
+        </div><!-- arrangement button -->
+        </div><!-- arrangement left view -->
+        <img src="../images/slider5.jpg" alt="">
+</div><!-- dating-details -->
+<hr style="margin:20px 0px;">
+</div><!-- date arrangement -->
+
+<div id="goodFriday-arrangement" class="goodFriday-arrangement" onclick="showDiv(this)" style="height: 40px;">
+<div class="heading-icon">
+<p>Good Friday Planning</p>
+<i class="fas fa-angle-up fa-2x"></i>
+</div><!-- heading icon -->
+<div class="goodFriday-details" id="goodFriday-details">
+    <div class="arrangement-left-view">
+        <p>Tired Of Work? Wanna Hangout? Wanna Feel Peace Again It's Weekend time
+        Make This Friday A Good Friday And Chillout With Your Buddies. Find A Place And Get The
+        Food And Drinks You Want On Your Table.
+        </p>
+        <div class="arrangement-button">
+        <a><button>Lets Chill</button></a>
+        </div><!-- arrangement button -->
+        </div><!-- arrangement left view -->
+        <img src="../images/slider5.jpg" alt="">
+</div><!-- dating-details -->
+<hr style="margin:20px 0px;">
+</div><!-- date arrangement -->
+
+<div id="teaCoffee-arrangement" class="teaCoffee-arrangement" onclick="showDiv(this)" style="height: 40px;">
+<div class="heading-icon">
+<p>Tea-Coffee Planning</p>
+<i class="fas fa-angle-up fa-2x"></i>
+</div><!-- heading icon -->
+<div class="teaCoffee-details" id="teaCoffee-details">
+    <div class="arrangement-left-view">
+        <p>Feeling Lazy? Alone On Home? Now Find A Place You Want And Share Your Ideas With Your Friends
+        With The Taste Of Tea And Coffee.
+        <div class="arrangement-button">
+        <a><button>Drink It</button></a>
+        </div><!-- arrangement button -->
+        </div><!-- arrangement left view -->
+        <img src="../images/slider5.jpg" alt="">
+</div><!-- dating-details -->
+<hr style="margin:20px 0px;">
+</div><!-- date arrangement -->
+
+</div><!-- arrangement lists -->
+
+</div><!-- what we arranges -->
+
+
+<div class="top-location-for-you" id="top-location-for-you">
+<div class="first-container">
+    <img src="../images/Group 1.png" alt="">
+    <h5>Top Locations</h5>
+    <p>Select Economic Luxury, Luxury, Premium Luxury Location.</p>
+    <hr style="margin-left:45%; margin-right: 45%; border: .5px solid #FFA710; margin-top: 5px;">
+</div><!-- first container -->
+
+<div class="second-container">
+<h4>Top Location (Sunsari)</h4>
+<button>See All</button>
+</div><!-- second container -->
+
+<div class="top-location-lists">
+
+<div class="single-location-card">
+
+<div class="first-container">
+<img src="../images/slider1.jpg" alt="">
+<div class="single-location-details">
+<h4>Hotel Intourist Palace</h4>
+<p>Premium Luxury</p>
+<p>Best For Birthdays</p>
+<p>Capacity: 30</p>
+<div class="single-location-details-button">
+<a href=""><button class="first-button">Let's Celebrate</button></a>
+<a href=""><button class="second-button">View location</button></a>
+</div><!-- single-location-details-button -->
+</div><!-- single-location-details -->
+</div><!-- first container -->
+
+<div class="second-container">
+<div class="locations-datas">
+<div class="luxury-stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div><!-- luxury stars -->
+<div class="location-views">
+    <i class="fas fa-eye"></i>
+    <p>36</p>
+    </div><!-- location views -->
+    
+    <div class="location-hearts">
+    <i class="fas fa-heart"></i>
+    <p>36</p>
+    </div><!-- location hearts -->
+    
+    <div class="location-map-view">
+    <i class="fas fa-map-marker-alt"></i>
+    <a href=""><p>Map</p></a>
+    </div>
+</div><!-- locations datas -->
+
+</div><!-- second container -->
+
+</div><!-- single location card -->
+
+
+<div class="single-location-card">
+
+    <div class="first-container">
+    <img src="../images/slider1.jpg" alt="">
+    <div class="single-location-details">
+    <h4>Hotel Intourist Palace</h4>
+    <p>Premium Luxury</p>
+    <p>Best For Birthdays</p>
+    <p>Capacity: 30</p>
+    <div class="single-location-details-button">
+    <a href=""><button class="first-button">Let's Celebrate</button></a>
+    <a href=""><button class="second-button">View location</button></a>
+    </div><!-- single-location-details-button -->
+    </div><!-- single-location-details -->
+    </div><!-- first container -->
+    
+    <div class="second-container">
+    <div class="locations-datas">
+    <div class="luxury-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div><!-- luxury stars -->
+    <div class="location-views">
+        <i class="fas fa-eye"></i>
+        <p>36</p>
+        </div><!-- location views -->
+        
+        <div class="location-hearts">
+        <i class="fas fa-heart"></i>
+        <p>36</p>
+        </div><!-- location hearts -->
+        
+        <div class="location-map-view">
+        <i class="fas fa-map-marker-alt"></i>
+        <a href=""><p>Map</p></a>
+        </div>
+    </div><!-- locations datas -->
+    
+    </div><!-- second container -->
+    
+    </div><!-- single location card -->
+
+    
+<div class="single-location-card">
+
+    <div class="first-container">
+    <img src="../images/slider1.jpg" alt="">
+    <div class="single-location-details">
+    <h4>Hotel Intourist Palace</h4>
+    <p>Premium Luxury</p>
+    <p>Best For Birthdays</p>
+    <p>Capacity: 30</p>
+    <div class="single-location-details-button">
+    <a href=""><button class="first-button">Let's Celebrate</button></a>
+    <a href=""><button class="second-button">View location</button></a>
+    </div><!-- single-location-details-button -->
+    </div><!-- single-location-details -->
+    </div><!-- first container -->
+    
+    <div class="second-container">
+    <div class="locations-datas">
+    <div class="luxury-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div><!-- luxury stars -->
+    <div class="location-views">
+        <i class="fas fa-eye"></i>
+        <p>36</p>
+        </div><!-- location views -->
+        
+        <div class="location-hearts">
+        <i class="fas fa-heart"></i>
+        <p>36</p>
+        </div><!-- location hearts -->
+        
+        <div class="location-map-view">
+        <i class="fas fa-map-marker-alt"></i>
+        <a href=""><p>Map</p></a>
+        </div>
+    </div><!-- locations datas -->
+    
+    </div><!-- second container -->
+    
+    </div><!-- single location card -->
+
+    
+<div class="single-location-card">
+
+    <div class="first-container">
+    <img src="../images/slider1.jpg" alt="">
+    <div class="single-location-details">
+    <h4>Hotel Intourist Palace</h4>
+    <p>Premium Luxury</p>
+    <p>Best For Birthdays</p>
+    <p>Capacity: 30</p>
+    <div class="single-location-details-button">
+    <a href=""><button class="first-button">Let's Celebrate</button></a>
+    <a href=""><button class="second-button">View location</button></a>
+    </div><!-- single-location-details-button -->
+    </div><!-- single-location-details -->
+    </div><!-- first container -->
+    
+    <div class="second-container">
+    <div class="locations-datas">
+    <div class="luxury-stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div><!-- luxury stars -->
+    <div class="location-views">
+        <i class="fas fa-eye"></i>
+        <p>36</p>
+        </div><!-- location views -->
+        
+        <div class="location-hearts">
+        <i class="fas fa-heart"></i>
+        <p>36</p>
+        </div><!-- location hearts -->
+        
+        <div class="location-map-view">
+        <i class="fas fa-map-marker-alt"></i>
+        <a href=""><p>Map</p></a>
+        </div>
+    </div><!-- locations datas -->
+    
+    </div><!-- second container -->
+    
+    </div><!-- single location card -->
+</div><!-- top location lists -->
+
+</div><!-- top-location-for-you -->
+
+<footer class="user-view-footer">
+<div class="first-container">
+<p>&copy;Copyright 2020-2021. <a href=""><span class="cName" style="color: #FFA710;"> HUNCHHA DIGITAL AGENCY.</span></a> All Rights Reserved.</p>
+</div><!-- first container -->
+
+<div class="second-container">
+<div class="social-link-icons">
+   <a href=""> <i class="fab fa-facebook"></i></a>
+    <a href=""><img src="../images/tiktok.png" alt="" height="20" width="20"></a>
+  <a href=""><img src="../images/insta3.png" alt="" height="20" width="20"></a>
+</div><!-- social-link-icons -->
+</div><!-- second container -->
+
+</footer>
+<script src="../js/top-button.js"></script>
+    <script src="../js/dropdown.js"></script>
+</body>
+</html>

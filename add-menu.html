@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/top-button.js"></script>
+    <script src="./js/image.js"></script>
+    <script src="./js/select.js"></script>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <div class="sidebar" id="sidebar">
+
+<div class="sidebar-brand">
+<h3 style="font-family: 'Pacifico', cursive; color: #006994;">Booking</h3>
+<i class="fas fa-times" id="close-mobile-nav" onclick="closeMobileNav()"></i>
+</div><!-- sidebar-brand ends -->
+
+<hr style="margin-right: 15px; margin-left: 15px;">
+
+<div class="sidebar-menu">
+<ul class="myDIV" id="myDiv">
+<li class="sidebar-list"><a href="./dashboard.html" class="sidebar-link active"><i class="fas fa-home"></i>Dashboard</a></li>
+<li class="sidebar-list"><a href="./table-lists.html" class="sidebar-link"><i class="fas fa-couch"></i>Table</a></li>
+<li class="sidebar-list"><a href="./props-lists.html" class="sidebar-link"><i class="fas fa-gift-card"></i>Props</a></li>
+<li class="sidebar-list"><a href="./menu-lists.html" class="sidebar-link"><i class="fas fa-page-break"></i>Menu</a></li>
+<li class="sidebar-list"><a href="./parking-lists.html" class="sidebar-link"><i class="fas fa-parking"></i>Parking</a></li>
+
+
+<li class="sidebar-list"><a href="./manage-profile.html" class="sidebar-link"><i class="fas fa-user"></i>Profile</a></li>
+
+</ul>
+</div><!-- sidebar-menu ends -->
+</div><!-- sidebar ends -->
+
+<div class="main-content" id="main-content">
+
+<header>
+<div class="dashboard">
+<i class="fas fa-times" id="dashboard-close-icon" style="color: #006994;" onclick="closeNav()"></i>
+<i class="fas fa-bars" id="dashboard-open-icon" style="color: #006994;" onclick="openNav()"></i>
+<i class="fas fa-bars" id="mobile-dashboard-open-icon" style="color: #006994;" onclick="openMobileNav()"></i>
+<h4 class="owner-name" style="margin-left: 5px; color:#231F20;">Hotel Intourist Palace</h4>
+</div><!-- dashboard ends -->
+
+<div class="user-wrapper">
+
+<a href="./dashboard-notification.html"><a href="./dashboard-notification.html"><div class="notification">
+    <div class="not">
+        <i class="fas fa-bell"></i>
+        <div class="badge"></div>
+    </div><!-- not ends -->
+</a>
+</a>
+
+</div><!-- Notification ends -->
+
+<img src="./images/hotel.jpg" alt="">
+
+<div class="logout">
+<i class="fas fa-sign-out"></i>
+</div>
+</div><!-- user-wrapper ends -->
+</header><!-- header ends -->
+
+<form action="" class="form">
+    <div class="header-components">
+    <h3 class="table-store-heading">Store Menu Details</h3>
+    </div>
+    <label for="tableNumbersss" id="menu-name-label" class="menu-label">Category</label>
+    <div class="input-form">
+        <select name="menu-category" id="menuCategory" class="menu-category" onchange="categorySelect()" required>
+            <option disabled selected>Choose One:</option>
+            <option value="food">Food</option>
+            <option value="drinks">Drinks</option>
+        </select>
+        </div>
+
+        <div id="food-sub-category">
+            <label for="tableNumbersss" id="menu-name-label" class="menu-label">Type</label>
+            <div class="input-form">
+            <select name="menu-type" id="" required>
+                <option disabled selected>Choose One:</option>
+            <option value="veg">Veg</option>
+            <option value="non-veg">Non-Veg</option>
+            </select>
+            </div>
+        </div>
+
+<div id="drinks-sub-category">
+    <label for="tableNumber" id="menu-name-label" class="menu-label">Type</label>
+    <div class="input-form">
+    <select name="menu-type" id="" required>
+        <option disabled selected>Choose One:</option>
+        <option value="water">Water</option>
+        <option value="milk">Milk</option>
+        <option value="soft-drinks">Soft Drinks</option>
+        <option value="sleep-drinks">Sleep Drinks</option>
+        <option value="hot-drinks">Hot Drinks</option>
+        <option value="juice">Juice</option>
+        <option value="alcoholic-drinks">Alcoholic Drinks(Beer, Cider, Wine)</option>
+        <option value="spirits">Spirits(All Drinks with 20%+ Alcohol Level)</option>
+    </select>
+    </div>
+</div>
+
+<div class="input-form">
+<input type="text" class="form-input" placeholder="" name="propsName" id="" required>
+<label for="tableNumbersss">Item Name</label>
+</div>
+
+<div class="input-form">
+    <input type="number" class="form-input" placeholder="" name="menuPrice" id="" required>
+    <label for="tableNumbersss">Item Price</label>
+    </div>
+
+<div class="input-file">
+<div class="input-form-file">
+<input type="file" class="form-input-file" name="" id="" onchange="menuImage(this)" required>
+<label for="">Menu Image (Required)</label>
+</div>
+<img id="menu-image" src="" alt="menu">
+</div>
+
+<div class="submit-button">
+<button type="submit">Store</button>
+</div>
+
+</form>
+
+<footer>
+<h5 style="margin-left: 5px;">&copy;2020-2021. All Rights Reserved. Hunchha Digital Agency.</h5>
+</footer>
+</div><!-- Main-content ends -->
+
+</body>
+</html>
